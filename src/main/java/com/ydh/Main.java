@@ -1,5 +1,6 @@
 package com.ydh;
 
+import com.ydh.problem.Solution114;
 import com.ydh.problem.Solution1296;
 import com.ydh.problem.Solution79;
 
@@ -11,13 +12,32 @@ public class Main {
 //        boolean result1296 = new Solution1296().isPossibleDivide(nums, k);
 //        System.out.println("result = " + result1296);
 
-        char[][] board = {
-                {'C','A','A'},
-                {'A','A','A'},
-                {'B','C','D'}
-        };;
-        String word = "AAB";
-        Boolean result79 = new Solution79().exist(board, word);
-        System.out.println("result = " + result79);
+        // Solution 79
+//        char[][] board = {
+//                {'C','A','A'},
+//                {'A','A','A'},
+//                {'B','C','D'}
+//        };;
+//        String word = "AAB";
+//        Boolean result79 = new Solution79().exist(board, word);
+//        System.out.println("result = " + result79);
+
+        // Solution 114
+        //    Input: root = [1,2,5,3,4,null,6]
+        //    Output: [1 2 3 4 5 6 ]
+        Solution114.TreeNode root = new Solution114.TreeNode(1);
+        root.left = new Solution114.TreeNode(2);
+        root.left.left = new Solution114.TreeNode(3);
+        root.left.right = new Solution114.TreeNode(4);
+        root.right = new Solution114.TreeNode(5);
+        root.right.right = new Solution114.TreeNode(6);
+
+        new Solution114().flatten(root);
+        System.out.print("[");
+        while (root != null) {
+            System.out.print(root.val + " ");
+            root = root.right;
+        }
+        System.out.println("]");
     }
 }
