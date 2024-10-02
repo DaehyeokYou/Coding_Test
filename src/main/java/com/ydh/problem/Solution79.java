@@ -1,5 +1,6 @@
 package com.ydh.problem;
 
+// https://leetcode.com/problems/word-search/description/
 public class Solution79 {
 
     public boolean exist(char[][] board, String word) {
@@ -37,4 +38,6 @@ public class Solution79 {
         board[m][n] = findChar; // backtrack
         return found;
     }
+
+
 }

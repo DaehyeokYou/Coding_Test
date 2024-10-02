@@ -8,6 +8,7 @@ import java.util.TreeMap;
 
 // https://leetcode.com/problems/divide-array-in-sets-of-k-consecutive-numbers/
 public class Solution1296 {
+
     public boolean isPossibleDivide(int[] nums, int k) {
         if (nums.length % k != 0) {
             return false;
